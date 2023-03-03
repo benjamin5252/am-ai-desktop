@@ -14,11 +14,12 @@
     "scripts": {
         "build": "tsc",
         "start": "tsc && electron .",
-        "pack": "tsc && cd .. && electron-packager ./electron-with-express --icon=./electron-with-express/dist/favicon.ico --ignore=\"^(?!(.*node_modules|.*dist))(.*src.*|.*screenshots.*|.*tsconfig.*|.*README.*|.*git.*)\" --asar.unpack=*.{node,dll,db} --overwrite"
+        "pack": "tsc && cd .. && electron-packager ./am-ai-desktop --icon=./am-ai-desktop/dist/favicon.ico --ignore=\"^(?!(.*node_modules|.*dist))(.*src.*|.*screenshots.*|.*tsconfig.*|.*README.*|.*git.*)\" --asar.unpack=*.{node,dll,db} --overwrite"
     },
     "dependencies": {
         "body-parser": "^1.20.1",
         "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
         "debug": "^4.3.4",
         "ejs": "^3.1.8",
         "express": "^4.18.2",
@@ -29,6 +30,7 @@
     },
     "devDependencies": {
         "@types/cookie-parser": "^1.4.3",
+        "@types/cors": "^2.8.13",
         "@types/express": "^4.17.17",
         "@types/http-errors": "^2.0.1",
         "@types/morgan": "^1.9.4",

@@ -7,6 +7,7 @@ import http from "http";
 import createError from "http-errors";
 import { name, expressPort, basePath } from "../package.json";
 import process from "process";
+import cors from 'cors';
 
 let dbPath = basePath;
 
@@ -48,6 +49,7 @@ app.set("port", expressPort);
 app.set("views", path.join(__dirname, path.join("..", "views")));
 app.set("view engine", "ejs");
 
+app.use(cors());
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
