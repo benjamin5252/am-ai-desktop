@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 import { name } from "../package.json";
 
 const appName = app.getPath("exe");
-const expressAppUrl = "http://127.0.0.1:3000";
+const expressAppUrl = "http://127.0.0.1:7582";
 let mainWindow: BrowserWindow | null;
 let expressPath = "./dist/src/express-app.js";
 
