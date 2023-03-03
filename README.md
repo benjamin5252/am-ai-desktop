@@ -1,3 +1,10 @@
+# pack to exe
+npm run pack
+
+# make exe into installer
+(prerequisite "visual studio" "wixtool")
+node build_installer.js
+
 # electron-with-express
 
 A simple project demonstrating how to spawn an Express app from Electron as well

@@ -14,7 +14,7 @@
     "scripts": {
         "build": "tsc",
         "start": "tsc && electron .",
-        "pack": "tsc && cd .. && electron-packager ./am-ai-desktop --icon=./am-ai-desktop/dist/favicon.ico --ignore=\"^(?!(.*node_modules|.*dist))(.*src.*|.*screenshots.*|.*tsconfig.*|.*README.*|.*git.*)\" --asar.unpack=*.{node,dll,db} --overwrite"
+        "pack": "tsc && electron-packager . --icon=./dist/favicon.ico --ignore=\"^(?!(.*node_modules|.*dist))(.*src.*|.*screenshots.*|.*tsconfig.*|.*README.*|.*git.*)\" --asar.unpack=*.{node,dll,db} --out=./output --overwrite"
     },
     "dependencies": {
         "body-parser": "^1.20.1",
@@ -37,6 +37,8 @@
         "@types/node": "^18.13.0",
         "@types/node-fetch": "^2.6.2",
         "electron": "^23.1.0",
+        "electron-wix-msi": "^5.0.0",
+        "exe-icon-extractor": "^1.0.8",
         "typescript": "^4.9.5"
     }
 }
